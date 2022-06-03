@@ -40,3 +40,8 @@ SELECT avg(weight_kg) FROM animals;
 SELECT * FROM animals WHERE escape_attempts = (SELECT max(escape_attempts) FROM animals);
 SELECT max(weight_kg) FROM animals GROUP BY name;
 SELECT avg(escape_attempts) FROM animals WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31' GROUP BY name;
+
+SELECT * FROM animals JOIN species ON species.name = 'Pokemon';
+SELECT * FROM animals JOIN owners ON owners.id = animals.owner_id;
+SELECT count(*) FROM animals JOIN species ON species.id = animals.species_id GROUP BY species_id;
+SELECT * from animals JOIN owners ON owners.full_name = 'Dean Winchester' WHERE escape_attempts = 0;
