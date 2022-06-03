@@ -24,8 +24,8 @@ CREATE TABLE animals (
   escape_attempts int,
   neutered boolean,
   weight_kg decimal,
-  species_id int,
-  owner_id int,
+  species varchar(100),
+  owner varchar(100),
   CONSTRAINT fk_owner
   	FOREIGN KEY(owner_id)
   		REFERENCES owners(id),
@@ -33,3 +33,7 @@ CREATE TABLE animals (
   	FOREIGN KEY(species_id)
   		REFERENCES species(id)
 );
+
+ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD COLUMN species_id BIGINT REFERENCES species (id);
+ALTER TABLE animals ADD COLUMN owner_id BIGINT REFERENCES owners(id);
