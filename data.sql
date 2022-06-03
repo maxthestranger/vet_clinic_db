@@ -30,3 +30,7 @@ UPDATE animals SET owner_id  = 2 WHERE name = 'Gabumon' OR name = 'Pikachu';
 UPDATE animals SET owner_id  = 3 WHERE name = 'Devimon' OR name = 'Plantmon';
 UPDATE animals SET owner_id  = 4 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 UPDATE animals SET owner_id  = 5 WHERE name = 'Angemon' OR name = 'Boarmon';
+
+INSERT INTO vets(name,age,date_of_graduation) values('William Tatcher',45,'2000-04-23'),('Maisy Smith',26,'2019-01-17'),('Stephanie Mendez',45,'1981-05-04'),('Jack Harkness',38,'2008-06-08');
+INSERT INTO specializations(vets_name,species_name) values('William Tatcher','Pokemon'),('Stephanie Mendez','Digimon,Pokemon'),('Jack Harkness','Digimon');
+INSERT INTO visits(animals_name,vets_name,date_of_visit) values('Agumon','William Tatcher','2020-05-25'),('Agumon','Stephanie Mendez','2020-07-22'),('Gabumon','Jack Harkness','2021-02-02'),('Pikachu','Maisy Smith','2020-01-05'),('Pikachu','Maisy Smith','2020-03-08'),('Pikachu','Maisy Smith','2020-05-14'),('Devimon','Stephanie Mendez','2021-05-04'),('Charmander','Jack Harkness','2021-02-24'),('Plantmon','Maisy Smith','2019-12-21'),('Plantmon','William Tatcher','2020-04-10'),('Squirtle','Stephanie Mendez','2020-09-29'),('Angemon','Jack Harkness','2020-10-03'),('Angemon','Jack Harkness','2020-11-04'),('Boarmon','Maisy Smith','2019-01-24'),('Boarmon','Maisy Smith','2019-05-15'),('Boarmon','Maisy Smith','2020-02-27'),('Boarmon','Maisy Smith','2019-01-24'),('Boarmon','Maisy Smith','2020-08-03'),('Blossom','Stephanie Mendaz','2020-05-24'),('Blossom','Willia, Tatcher','2021-01-11');

@@ -37,3 +37,7 @@ CREATE TABLE animals (
 ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD COLUMN species_id BIGINT REFERENCES species (id);
 ALTER TABLE animals ADD COLUMN owner_id BIGINT REFERENCES owners(id);
+
+CREATE TABLE vets(id SERIAL PRIMARY KEY NOT NULL,name VARCHAR(255), age INT,date_of_graduation date);
+CREATE TABLE specializations(id SERIAL PRIMARY KEY NOT NULL,vets_name VARCHAR(255), species_name VARCHAR(255));
+CREATE TABLE visits(id SERIAL PRIMARY KEY NOT NULL,animals_name VARCHAR(255), vets_name VARCHAR(255),date_of_visit date);
