@@ -7,3 +7,8 @@ SELECT name, date_of_birth FROM animals WHERE weight_kg >= 10.5;
 SELECT * FROM animals WHERE neutered;
 SELECT * FROM animals WHERE name != 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
+
+SELECT * FROM animals JOIN species ON species.name = 'Pokemon';
+SELECT * FROM animals JOIN owners ON owners.id = animals.owner_id;
+SELECT count(*) FROM animals JOIN species ON species.id = animals.species_id GROUP BY species_id;
+SELECT * from animals JOIN owners ON owners.full_name = 'Dean Winchester' WHERE escape_attempts = 0;
