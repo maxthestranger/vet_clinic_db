@@ -58,3 +58,13 @@ elect animals.name, visits.date_of_visit,vets.name from animals INNER JOIN visit
 select animals.*,vets.*,visits.date_of_visit from animals INNER JOIN visits ON visits.animals_id=animals.id INNER JOIN vets ON vets.id=visits.vets_id ORDER BY date_of_visit DESC LIMIT 1;
 select vets.name,COUNT(visits.vets_id) as visit,COUNT(species.name) as specialization from vets LEFT JOIN specializations ON vets.id=specializations.vets_id LEFT JOIN species ON species.id=specializations.species_id INNER JOIN visits ON visits.vets_id =vets.id GROUP BY vets.name ORDER BY visit DESC LIMIT 1;
 select vets.name,species.name from vets INNER JOIN specializations ON vets.id!=specializations.vets_id INNER JOIN species ON species.id !=specializations.species_id where vets.name='Maisy Smith';
+
+-- optimzation
+SELECT COUNT(*) FROM visits where animal_id = 4;
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+
+SELECT * FROM visits where vet_id = 2;
+explain analyze SELECT * FROM visits where vet_id = 2;
+
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+explain analyze SELECT * FROM owners where email = 'owner_18327@mail.com';

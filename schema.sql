@@ -41,3 +41,13 @@ ALTER TABLE animals ADD COLUMN owner_id BIGINT REFERENCES owners(id);
 CREATE TABLE vets(id SERIAL PRIMARY KEY NOT NULL,name VARCHAR(255), age INT,date_of_graduation date);
 CREATE TABLE specializations(id SERIAL PRIMARY KEY NOT NULL,vets_name VARCHAR(255), species_name VARCHAR(255));
 CREATE TABLE visits(id SERIAL PRIMARY KEY NOT NULL,animals_name VARCHAR(255), vets_name VARCHAR(255),date_of_visit date);
+
+-- optimzation
+create index animal_id_index on visits(animal_id ASC);
+
+create index vet_id_index on visits(vet_id ASC);
+DROP INDEX vet_id_index;
+create index vet_id_index on visits(vet_id DESC);
+
+
+create index email_index on owners(email ASC);
