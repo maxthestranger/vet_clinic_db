@@ -1,9 +1,11 @@
+/*the first table  for patients*/
+
 CREATE TABLE patients (
   id INT PRIMARY KEY,
   name VARCHAR,
   date_of_birth DATE
 );
-
+/*the second table  for history*/
 CREATE TABLE medical_history (
   id INT PRIMARY KEY,
   admitted_at TIMESTAMP,
@@ -11,13 +13,13 @@ CREATE TABLE medical_history (
   status VARCHAR,
   FOREIGN KEY (patient_id) REFERENCES patients (id)
 );
-
+/*the third table  for ttreatments*/
 CREATE TABLE treatments (
   id INT PRIMARY KEY,
   type VARCHAR,
   name VARCHAR,
 );
-
+/*the forth table  invoice-items*/
 CREATE TABLE invoice_items (
   id INT PRIMARY KEY,
   unit_price DECIMAL,
@@ -28,7 +30,7 @@ CREATE TABLE invoice_items (
   FOREIGN KEY (treatment_id) REFERENCES treatments (id),
   FOREIGN KEY (invoice_id) REFERENCES invoices (id)
 );
-
+/*the fith table  for Invoices*/
 CREATE TABLE invoices (
   id INT PRIMARY KEY,
   total_amount DECIMAL,
