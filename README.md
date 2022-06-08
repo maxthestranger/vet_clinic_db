@@ -23,6 +23,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [@maxthestranger](https://twitter.com/maxthestranger)
 - LinkedIn: [maxthestranger](https://linkedin.com/in/maxthestranger)
 
+👤 **Ezekiel Utshudi Eteta**
+
+- GitHub: [@ezekielutshudi](https://github.com/EzekielUtshudi)
+- Twitter: [@ezekielutshudi](https://twitter.com/UtshudiEzekiel)
+- LinkedIn: [@ezekielutshudi](https://www.linkedin.com/in/ezekiel-utshudi-195782162/)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
