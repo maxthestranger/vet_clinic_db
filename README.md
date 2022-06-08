@@ -11,6 +11,10 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
+## ER Diagram
+
+[Link to ER Diagram](https://drawsql.app/nolegit/diagrams/vet-clinic)
+
 ## Authors
 
 👤 **Max The Stranger**
@@ -18,6 +22,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - GitHub: [@maxthestranger](https://github.com/maxthestranger)
 - Twitter: [@maxthestranger](https://twitter.com/maxthestranger)
 - LinkedIn: [maxthestranger](https://linkedin.com/in/maxthestranger)
+
+👤 **Ezekiel Utshudi Eteta**
+
+- GitHub: [@ezekielutshudi](https://github.com/EzekielUtshudi)
+- Twitter: [@ezekielutshudi](https://twitter.com/UtshudiEzekiel)
+- LinkedIn: [@ezekielutshudi](https://www.linkedin.com/in/ezekiel-utshudi-195782162/)
+
 
 ## 🤝 Contributing
 
